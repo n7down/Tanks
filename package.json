@@ -4,6 +4,7 @@
   "description": "Tanks is a HTML5 game using [NodeJs](https://nodejs.org/en/).",
   "main": "app.js",
   "scripts": {
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "n7down",
