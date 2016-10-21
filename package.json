@@ -1,0 +1,15 @@
+{
+  "name": "tanks",
+  "version": "1.0.0",
+  "description": "Tanks is a HTML5 game using [NodeJs](https://nodejs.org/en/).",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "n7down",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.14.0",
+    "socket.io": "^1.5.0"
+  }
+}
