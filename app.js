@@ -23,20 +23,20 @@ var Player = function(id) {
     pressingLeft: false,
     pressingUp: false,
     pressingDown: false,
-    maxSpd: 10
+    maxSpeed: 10
   }
   self.updatePosition = function() {
     if(self.pressingRight) {
-      self.x += self.maxSpd;
+      self.x += self.maxSpeed;
     }
     if(self.pressingLeft) {
-      self.x -= self.maxSpd;
+      self.x -= self.maxSpeed;
     }
     if(self.pressingUp) {
-      self.y -= self.maxSpd;
+      self.y -= self.maxSpeed;
     }
     if(self.pressingDown) {
-      self.y += self.maxSpd;
+      self.y += self.maxSpeed;
     }
   }
   return self;
@@ -52,25 +52,28 @@ io.sockets.on('connection', function(socket) {
 
   console.log('socket connection');
 
+  var player = Player(socket.id);
+  PLAYER_LIST[socket.id] = player;
+
   socket.on('disconnect', function() {
     delete SOCKET_LIST[socket.id];
     delete PLAYER_LIST[socket.id];
   });
 
   socket.on('keyPress', function(data) {
-    if(data.inputId === 'left') {
+    if(data.inputId == 'left') {
       player.pressingLeft = data.state;
     }
-    else if(data.inputId === 'right') {
+    else if(data.inputId == 'right') {
       player.pressingRight = data.state;
     }
-    else if(data.inputId === 'up') {
+    else if(data.inputId == 'up') {
       player.pressingUp = data.state;
     }
-    else if(data.inputId === 'down') {
+    else if(data.inputId == 'down') {
       player.pressingDown = data.state;
     }
-  });
+  })
 });
 
 setInterval(function() {

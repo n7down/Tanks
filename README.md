@@ -13,4 +13,4 @@ Tanks is a HTML5 multiplayer game. This is a work in progress.
 3. Connect to the game on `localhost:2000`
 
 ## Todo
-Finish this [video](https://www.youtube.com/watch?annotation_id=annotation_4117949269&feature=iv&src_vid=_GioD4LpjMw&v=hO14DHHpgxw)
+Finish this [video](https://www.youtube.com/watch?v=Tm-PXo9udWQ)
